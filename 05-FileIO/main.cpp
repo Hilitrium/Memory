@@ -48,45 +48,45 @@ using std::fstream;
 
 int main() {
 
-	//fstream file;
+	fstream file;
 
-	//file.open("text.txt");
-	//
-	//if (file.fail()) {
-	//	std::cout << "File not found." << std::endl;
-	//	return -1;
-	//}
-	////Reading from a File
+	file.open("text.txt");
+	
+	if (file.fail()) {
+		std::cout << "File not found." << std::endl;
+		return -1;
+	}
+	//Reading from a File
 
-	//string buffer;
-	//while (std::getline(file, buffer)) {
-	//	// print the line
-	//	std::cout << buffer << std::endl;
-	//}
+	string buffer;
+	while (std::getline(file, buffer)) {
+		// print the line
+		std::cout << buffer << std::endl;
+	}
 
-	//file.clear(); // reset the error flags
+	file.clear(); // reset the error flags
 
-	//file.seekp(0, std::ios_base::end); // move my cursor to the end
+	file.seekp(0, std::ios_base::end); // move my cursor to the end
 
-	//// write to the file
-	//// write a message
+	// write to the file
+	// write a message
 
-	//file << std::endl << "";
+	file << std::endl << "";
 
-	//file.flush();
-	//file.close();
+	file.flush();
+	file.close();
 
-	//// lets create another thing
+	// lets create another thing
 
-	//fstream autoCreate;
+	fstream autoCreate;
 
-	//autoCreate.open("createme.txt", std::ios::out);
+	autoCreate.open("createme.txt", std::ios::out);
 
-	//if (autoCreate.fail()) {
-	//	std::cout << "File not found." << std::endl;
-	//	return -1;
-	//}
-	//autoCreate.close();
+	if (autoCreate.fail()) {
+		std::cout << "File not found." << std::endl;
+		return -1;
+	}
+	autoCreate.close();
 
 	// Closed Problems
 	// Digital Printer
