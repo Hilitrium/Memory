@@ -3,7 +3,13 @@
 #include"choiceStats.h"
 using namespace std;
 
-void chapter1() {
+
+
+
+
+
+
+void chapter1(ChoiceData &Data) {
 
 
 	int choice1 = 0;
@@ -36,42 +42,50 @@ void chapter1() {
 		cin >> choice1;
 	}
 	if (choice1 = 1) {
-		stayWLibrarian();
 
-		int choiceCount = 11;
-		Choice choices[100];
-
+		Choice choice[100];
+		ChoiceData data;
+		fstream File;
 		string Idx = "@Choice";
+		int choiceCount = 11;
 		string IdxNum = std::to_string(choiceCount);
 		string Buffer;
 		Idx.append(IdxNum); // @Choice11
 
-		//SEARCHING FOR OUR CHOICE
+		////SEARCHING FOR OUR CHOICE
 	
+		//fstream gameDataStream;
+		//gameDataStream.open("gameDataSave2.txt", ios_base::out | ios_base::_Nocreate | ios_base::in);
+
+		//
+		//int TimesChoiceWasMade = 0;
+		//if (gameDataStream.fail()) {
+		//	cout << "Unable to find game files" << endl;
+		//	
+		//}
+
+		//while (getline(gameDataStream, Buffer))
+		//{
+		//	if (Idx == Buffer)
+		//	{
+		//
+		//		break;
+		//	}
+		//}
+
+		//getline(gameDataStream, Buffer); // 0
+		//TimesChoiceWasMade = stoi(Buffer);
+		//
+		//TimesChoiceWasMade++;
+		//gameDataStream << TimesChoiceWasMade;
 
 
-		fstream gameDataStream;
-		gameDataStream.open("gameDataSave2.txt", ios_base::out | ios_base::_Nocreate);
 
+		//gameDataStream.flush();
+		//gameDataStream.close(); 
 
-		while (getline(gameDataStream, Buffer))
-		{
-			if (Idx == Buffer)
-			{
-				break; // @Choice52
-			}
-		}
-		//gameDataStream << <<endl
-		getline(gameDataStream, Buffer); // 0
-		int TimesChoiceWasMade = stoi(Buffer);
-
-		if (gameDataStream.fail()) {
-			cout << "Unable to find game files" << endl;
-			
-		}
-		
-		gameDataStream.close();
-
+		//ReWriteFile(File, data);
+		stayWLibrarian();
 	}
 
 	if (choice1 = 2) {

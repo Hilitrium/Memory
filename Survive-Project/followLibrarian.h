@@ -78,6 +78,51 @@ void followLibrarian() {
 			cout << "repair itself at an incredible rate. If you plan on killing this monster you will have to" << endl;
 			cout << "do it fast so he doesnt get a chance to heal. You begin to hear a chittering sound coming" << endl;
 			cout << "from down the hallway. " << endl;
+
+			/*fstream statsStream;
+			statsStream.open("gameDataSave2.txt");
+
+			if (statsStream.fail()) {
+				cout << "Unable to open stats file." << endl;
+			}
+
+			int statsCount = 0;
+			Choice timesMade[100];
+
+			while (true) {
+				string buf;
+				bool statsFound = false;
+				while (getline(statsStream, buf)) {
+					if (buf[0] == '@') {
+						statsFound = true;
+						break;
+					}
+				}
+				if (!statsFound) { break; }
+
+				Choice& curStat = timesMade[statsCount];
+
+				getline(statsStream, buf);
+				curStat.choice11 = stof(buf);
+				getline(statsStream, buf);
+				curStat.choice12 = stof(buf);
+				getline(statsStream, buf);
+				curStat.choice21 = stof(buf);
+				getline(statsStream, buf);
+				curStat.choice22 = stof(buf);
+				getline(statsStream, buf);
+				curStat.choice31 = stof(buf);
+				getline(statsStream, buf);
+				curStat.choice32 = stof(buf);
+				getline(statsStream, buf);
+				curStat.choice41 = stof(buf);
+				getline(statsStream, buf);
+				curStat.choice42 = stof(buf);
+				getline(statsStream, buf);
+				curStat.choice51 = stof(buf);
+				getline(statsStream, buf);
+				curStat.choice52 = stof(buf);
+			}*/
 		}
 		else {
 			cout << "you failed.";
